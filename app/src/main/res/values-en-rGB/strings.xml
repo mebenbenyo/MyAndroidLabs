@@ -3,4 +3,7 @@
     <string name="app_name">Sewuese\'s Android Labs</string>
     <string name="hello_message">Hello World!</string>
     <string name="button_message">I AM A BUTTON</string>
+    <string name="editmessage">I am an Edit Text</string>
+    <string name="hinttext">Write something here...</string>
+    <string name="coffee_message">Do you drink coffee?</string>
 </resources>
