@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 
 import androidx.test.espresso.ViewInteraction;
+import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
@@ -27,6 +28,9 @@ import org.hamcrest.TypeSafeMatcher;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import algonquin.cst2335.ayu00002.MainActivity;
+import algonquin.cst2335.ayu00002.R;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -48,7 +52,7 @@ public class MainActivityTest {
             e.printStackTrace();
         }
         //find the view
-        ViewInteraction appCompatEditText = onView( withId(R.id.passwordText) );
+        ViewInteraction appCompatEditText = onView( ViewMatchers.withId(R.id.passwordText) );
         //type in 12345
         appCompatEditText.perform(replaceText("12345"), closeSoftKeyboard());
 
