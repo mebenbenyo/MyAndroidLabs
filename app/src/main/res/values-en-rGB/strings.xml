@@ -7,5 +7,5 @@
     <string name="timemessage">Time goes here</string>
     <string name="receiveButton">RECEIVE</string>
     <string name="sendButton">SEND</string>
-    <string name="chatText">TextView</string>
+    <string name="chatText">Start chat here</string>
 </resources>
