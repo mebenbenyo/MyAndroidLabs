@@ -3,6 +3,9 @@ package algonquin.cst2335.ayu00002;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -136,6 +139,19 @@ public class ChatRoom extends AppCompatActivity {
         });
         binding.recycleView.setLayoutManager(new LinearLayoutManager(this));
 
+        chatModel.selectedMessage.observe(this, (newMessageValue) -> {
+            MessageDetailsFragment chatFragment = new MessageDetailsFragment(newMessageValue);
+
+            FragmentManager fMgr = getSupportFragmentManager();
+            FragmentTransaction tx = fMgr.beginTransaction();
+            tx.replace(R.id.fragmentLocation, chatFragment);
+            tx.addToBackStack("");
+            tx.commit();
+
+// ]]
+
+        });
+
     }
     class MyRowHolder extends RecyclerView.ViewHolder {
         TextView messageText;
@@ -146,6 +162,9 @@ public class ChatRoom extends AppCompatActivity {
 
             itemView.setOnClickListener(clk -> {
                 int position = getAbsoluteAdapterPosition();
+                ChatMessage selected = messages.get(position);
+                chatModel.selectedMessage.postValue(selected);
+                /*
                 AlertDialog.Builder builder = new AlertDialog.Builder( ChatRoom.this );
                 builder.setTitle("Question:")
                         .setMessage("Do you want to delete the message: " + messageText.getText())
@@ -166,6 +185,7 @@ public class ChatRoom extends AppCompatActivity {
                                     .show();
                         })
                                 .create().show();
+                  */
             });
             messageText = itemView.findViewById(R.id.message);
             timeText = itemView.findViewById(R.id.time);

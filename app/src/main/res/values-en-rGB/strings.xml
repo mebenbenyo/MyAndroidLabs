@@ -8,4 +8,6 @@
     <string name="receiveButton">RECEIVE</string>
     <string name="sendButton">SEND</string>
     <string name="chatText">Start chat here</string>
+    <string name="dbID">Database ID goes here</string>
+    <string name="sendorreceive">Send or Receive goes here</string>
 </resources>
