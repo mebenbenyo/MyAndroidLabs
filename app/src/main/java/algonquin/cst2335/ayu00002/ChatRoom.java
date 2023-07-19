@@ -190,8 +190,9 @@ public class ChatRoom extends AppCompatActivity {
                                         runOnUiThread( () -> myAdapter.notifyItemInserted(position));
                                     })
                                     .show();
-                            Intent intent = new Intent(ChatRoom.this, ChatRoom.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(ChatRoom.this, ChatRoom.class);
+//                            startActivity(intent);
+                            onBackPressed();
                         })
                                 .create().show();
                 } else if(item.getItemId() == R.id.item_2) {
