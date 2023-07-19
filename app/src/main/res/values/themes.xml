@@ -10,6 +10,8 @@
         <!-- Text color -->
         <item name="android:textColor">@color/my_text</item>
         <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.SewuesesAndroidLabs" parent="Base.Theme.SewuesesAndroidLabs" />
