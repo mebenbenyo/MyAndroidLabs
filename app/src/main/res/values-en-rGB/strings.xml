@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sewuese\'s Android Labs</string>
-    <string name="hello_message">Type your Password:</string>
-    <string name="button_message">LOGIN</string>
+    <string name="hello_message">Hi everyone!</string>
+    <string name="button_message">GET FORECAST</string>
+    <string name="city_message">Type in the city name:</string>
+    <string name="city_hint">Input city name here</string>
+    <string name="password_message">Input password here:</string>
 </resources>

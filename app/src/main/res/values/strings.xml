@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Sewuese\'s Android Labs</string>
-    <string name="hello_message">Type your Password:</string>
-    <string name="button_message">LOGIN</string>
+    <string name="city_message">Type in the name of a city:</string>
+    <string name="city_hint">Type city name here</string>
+    <string name="password_message">Type in password here:</string>
+    <string name="button_message">GET FORECAST</string>
+    <string name="hello_message">Hello World!</string>
 </resources>
